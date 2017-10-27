@@ -14,8 +14,16 @@
 .box2 {
    position: relative;
    top: 50%;
-   transform: translateY(-50%);
+   transform: translateY(-120%);
    text-align: center;
+   padding-left: 0px;
+}
+.box3 {
+   position: relative;
+   top: 50%;
+   transform: translateY(-100%);
+   text-align: center;
+   padding-left: 0px;
 }
 
 body {
@@ -54,9 +62,11 @@ p {
     padding-bottom: -5px;
 }
 .parent {
-    padding-bottom: 200px;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 50px;
     background-color: white; 
-    max-width: 1410px;
+    max-width: 1210px;
     margin: auto;
     box-shadow: 10px 10px 5px #888888;
     border: 1px solid black;
@@ -80,4 +90,13 @@ p {
     .box {
         width: 46%;
     }
+}
+
+a.button {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+
+    text-decoration: none;
+    color: initial;
 }

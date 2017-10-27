@@ -7,46 +7,22 @@
 		<li><a href="./index.php">Home</a></li>
 		<li><a href="./projects.php">Projects</a></li>
 		<li><a href="https://gitlab.com/bryanthinton01">Git</a></li>
-		<li><a href="./about">About</a></li>
+		<li><a href="./about.php">About</a></li>
 	</ul><br>
 	<div class='parent'>
-		<p> Hey! Welcome to my website! It doesn't do anything useful yet.... but the boxes move when you resize the window, so that's pretty cool.</p>
-	    <div class='box'>
-	        <!-- <p class='box2'>This is a test textbox</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>This is another test textbox.....</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>And another</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>And another.....</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>And.... another</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>Another???</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>Okay, last one now, I promise....</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>LOL, JK</p> -->
-	    </div>
-	    <div class='box'>
-	        <!-- <p class='box2'>This is the last one</p> -->
-	    </div>
-	   <!--  <div class='box'>
-	        <input type='button' value="Button" onclick="testFunction()" style="width: 100%; height: 100%;">
-	    </div> -->
-	    <div class='box'>
-	        <p class='box2' id='add'></p>
-	    </div>
-	    <!-- <div class='box'>
-	        <input type='button' value="Button" onclick="testFunction()" style="width: 100%; height: 100%;">
-	    </div> -->
+		<h4 style="text-align: center;"> This is a non-exhaustive list of the pages I've worked on while at BYU Risk Management</h4>
+	    <a class="button box" href="https://risk.byu.edu/forms/drill"><p class="box2">Drill Form</p></a>
+	    <a class="button box" href="https://risk.byu.edu/forms/driverincident"><p class="box2">Driver's Incident Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/forms/generalinjury"><p class="box2">General Injury Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/forms/safetyreport"><p class="box2">General Incident Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/forms/eventapproval"><p class="box2">Event Approval Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/forms/youthinjury"><p class="box2">EFY Injury Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/forms/pickupissue"><p class="box2">Pickup Issue Form</p></a>
+		<a class="button box" href="https://risk.byu.edu/insurance/events.php"><p class="box3">Event Approval Process Flowchart</p></a>
+		<a class="button box" href="https://risk.byu.edu/insurance/eventsFAQ.php"><p class="box2">Event Approval FAQ</p></a>
+		<a class="button box" href="https://risk.byu.edu/insurance/vendorlist.php"><p class="box3">Approved Off-Campus Vendor List (Maintained)</p></a>
+		<a class="button box" href="https://policy.byu.edu"><p class="box3">Policy (Made code PHP 7 compatible)</p></a>
+		
 	</div>
 </body>
 

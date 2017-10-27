@@ -6,11 +6,12 @@ function testFunction() {
      jQuery("#add").html(this.responseText);
     }
   };
-  xhttp.open("GET", "untitled.txt", true);
+  xhttp.open("GET", "Lorem Ipsum.php", true);
   xhttp.send();
+  // jQuery("#add").show();
 }
 
-jQuery('#studentService').click(function(e) {
-	e.preventDefault();
-	jQuery('#studentServiceText').fadeToggle(100);
-});
+// jQuery('#studentService').click(function(e) {
+// 	e.preventDefault();
+// 	jQuery('#studentServiceText').fadeToggle(100);
+// });
