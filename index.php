@@ -6,7 +6,8 @@
 	<ul>
 		<li><a href="./index.php">Home</a></li>
 		<li><a href="./projects.php">Projects</a></li>
-		<li><a href="https://gitlab.com/bryanthinton01">Git</a></li>
+		<li><a href="./CS260/">CS 260</a></li>
+		<!--<li><a href="https://gitlab.com/bryanthinton01">Git</a></li>-->
 		<li><a href="./about.php">About</a></li>
 	</ul><br>
 	<div class='parent'>
