@@ -31,7 +31,14 @@ body {
     font-family: Verdana;
 }
 
-ul {
+h1 {
+    color: #f0f0f2; 
+    margin: 0px; 
+    padding: 25px;
+    padding-bottom: 15px;
+}
+
+.header {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -39,11 +46,11 @@ ul {
     background-color: #333;
 }
 
-li {
+ul.header li {
     float: left;
 }
 
-li a {
+ul.header li a {
     display: block;
     color: white;
     text-align: center;
@@ -52,7 +59,7 @@ li a {
 }
 
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+ul.header li a:hover {
     background-color: #111;
 }
 
