@@ -1,56 +1,32 @@
-.box { 
-    border: 1px solid black; 
-    width: 18.6%;
-    height: 110px;
-    margin-left: 8px;
-    margin-top: 8px; 
-    margin-right: 0px;
-    margin-bottom: 0px;
-    background-color: #ccc7c7;
-    display: inline-block;
-    vertical-align: top;
-
-}
-.box2 {
-   position: relative;
-   top: 50%;
-   transform: translateY(-120%);
-   text-align: center;
-   padding-left: 0px;
-}
-.box3 {
-   position: relative;
-   top: 50%;
-   transform: translateY(-100%);
-   text-align: center;
-   padding-left: 0px;
-}
+/*Stuff needed for main theme*/
 
 body {
     background-image: url('img/preview.jpg');
     font-family: Verdana;
 }
 
-h1 {
+nav h1 {
+    font-size: 2em;
     color: #f0f0f2; 
-    margin: 0px; 
+    margin: 0; 
     padding: 25px;
     padding-bottom: 15px;
 }
 
-.header {
+nav ul, nav div {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
     background-color: #333;
+
 }
 
-ul.header li {
+nav ul li {
     float: left;
 }
 
-ul.header li a {
+nav ul li a {
     display: block;
     color: white;
     text-align: center;
@@ -58,8 +34,7 @@ ul.header li a {
     text-decoration: none;
 }
 
-/* Change the link color to #111 (black) on hover */
-ul.header li a:hover {
+nav ul li a:hover {
     background-color: #111;
 }
 
@@ -68,18 +43,37 @@ p {
     padding-left: 10px;
     padding-bottom: -5px;
 }
+
+section {
+ display: flex;
+}
+
+aside {
+ flex: 1
+}
+
+article {
+ flex: 4
+}
+
 .parent {
+    min-height: 900px;
     padding-left: 30px;
     padding-right: 30px;
     padding-bottom: 50px;
     background-color: white; 
     max-width: 1210px;
     margin: auto;
+    margin-top: 20px;
     box-shadow: 10px 10px 5px #888888;
     border: 1px solid black;
 
 }
- 
+
+
+
+/*Stuff needed for dynamic box movement*/
+
 @media screen and (max-width: 1100px)
 {
     .box {
@@ -106,4 +100,32 @@ a.button {
 
     text-decoration: none;
     color: initial;
+}
+
+.box { 
+    border: 1px solid black; 
+    width: 18.6%;
+    height: 110px;
+    margin-left: 8px;
+    margin-top: 8px; 
+    margin-right: 0px;
+    margin-bottom: 0px;
+    background-color: #ccc7c7;
+    display: inline-block;
+    vertical-align: top;
+
+}
+.box2 {
+   position: relative;
+   top: 50%;
+   transform: translateY(-120%);
+   text-align: center;
+   padding-left: 0px;
+}
+.box3 {
+   position: relative;
+   top: 50%;
+   transform: translateY(-100%);
+   text-align: center;
+   padding-left: 0px;
 }
