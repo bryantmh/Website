@@ -75,7 +75,7 @@
 			"file": "portfolio/index.html",
 			"settings":
 			{
-				"buffer_size": 2320,
+				"buffer_size": 2278,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -84,7 +84,7 @@
 			"file": "portfolio/projects.html",
 			"settings":
 			{
-				"buffer_size": 2036,
+				"buffer_size": 1994,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -101,7 +101,7 @@
 			"file": "portfolio/contact.html",
 			"settings":
 			{
-				"buffer_size": 885,
+				"buffer_size": 843,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -110,7 +110,7 @@
 			"file": "portfolio/experience.html",
 			"settings":
 			{
-				"buffer_size": 866,
+				"buffer_size": 824,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -119,7 +119,7 @@
 			"file": "portfolio/portfolio.css",
 			"settings":
 			{
-				"buffer_size": 1760,
+				"buffer_size": 1923,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
@@ -161,8 +161,8 @@
 	},
 	"expanded_folders":
 	[
-		"/C/Apache24/htdocs",
-		"/C/Apache24/htdocs/portfolio"
+		"/C/Website",
+		"/C/Website/portfolio"
 	],
 	"file_history":
 	[
@@ -373,7 +373,7 @@
 	"groups":
 	[
 		{
-			"selected": 2,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -382,15 +382,44 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 2320,
+						"buffer_size": 2278,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2155,
-								2155
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "portfolio/projects.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1994,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
 							]
 						],
 						"settings":
@@ -403,35 +432,6 @@
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "portfolio/projects.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2036,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								541,
-								541
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -459,7 +459,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
@@ -468,15 +468,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 885,
+						"buffer_size": 843,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								61,
-								61
+								0,
+								0
 							]
 						],
 						"settings":
@@ -497,15 +497,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 866,
+						"buffer_size": 824,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								301,
-								301
+								0,
+								0
 							]
 						],
 						"settings":
@@ -526,15 +526,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1760,
+						"buffer_size": 1923,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								668,
-								668
+								0,
+								0
 							]
 						],
 						"settings":
