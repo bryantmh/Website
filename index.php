@@ -1,17 +1,21 @@
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="script.js" ></script>
-<link rel="stylesheet" type="text/css" href="style.css">
+<head>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="./portfolio/portfolio.css">
+	<title>Home</title>
+</head>
+
+<nav>
+	<div><i class="fa fa-3x fa-camera" aria-hidden="true"></i><h1>BryantHinton.com</h1></div>
+	<ul>
+		<li><a href="./">Home</a></li>
+		<li><a href="./portfolio">Portfolio</a></li>
+		<li><a href="./photography/">Photography</a></li>
+	</ul>
+</nav>
 
 <body>
-	<ul>
-		<li><a href="./index.php">Home</a></li>
-		<li><a href="./projects.php">Projects</a></li>
-		<li><a href="./CS260/">CS 260</a></li>
-		<!--<li><a href="https://gitlab.com/bryanthinton01">Git</a></li>-->
-		<li><a href="./about.php">About</a></li>
-	</ul><br>
 	<div class='parent'>
-		<p> Hey! Welcome to my website! It doesn't do too much yet.... but the boxes move when you resize the window, so that's pretty cool.</p>
+		<h2> Hey! Welcome to my website!</h2>
 	    <div class='box'>
 	         <input type='button' value="Button" onclick="testFunction()" style="width: 100%; height: 100%;">
 	    </div>
@@ -44,9 +48,9 @@
 	    </div>
 	    <br><br>
 	    <div id="add"></div>
-	 
 	</div>
-
 </body>
 
-<a href='http://www.freepik.com/free-vector/grey-linen-texture-background_835399.htm' style="font-size: .6em; float: right; color: black;">Background by Freepik</a>
+<footer>
+	<a href='http://www.freepik.com/free-vector/grey-linen-texture-background_835399.htm' style="font-size: .6em; float: right; padding-right: 20px;">Background by Freepik</a>
+</footer>

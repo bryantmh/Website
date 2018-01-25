@@ -3,6 +3,8 @@
 body {
     background-image: url('img/preview.jpg');
     font-family: Verdana;
+    font-size: 16px;
+    margin: 0px;
 }
 
 nav h1 {
@@ -10,7 +12,7 @@ nav h1 {
     color: #f0f0f2; 
     margin: 0; 
     padding: 25px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
 }
 
 nav ul, nav div {
@@ -38,6 +40,21 @@ nav ul li a:hover {
     background-color: #111;
 }
 
+footer {
+    /*position: fixed;*/
+    left: 0;
+    bottom: 0;
+    max-width: 100%;
+    background-color: #333;
+    color: #f0f0f2;
+    height: 40px;
+    padding: 10px;
+}
+
+footer a {
+    color: #f0f0f2;
+}
+
 p {
     padding-top: 10px;
     padding-left: 10px;
@@ -49,11 +66,11 @@ section {
 }
 
 aside {
- flex: 1
+ flex: 2
 }
 
 article {
- flex: 4
+ flex: 3
 }
 
 .parent {
@@ -64,12 +81,30 @@ article {
     background-color: white; 
     max-width: 1210px;
     margin: auto;
-    margin-top: 20px;
+    margin-top: 30px;
     box-shadow: 10px 10px 5px #888888;
     border: 1px solid black;
-
+    margin-bottom: 30px;
 }
 
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+}
+
+.fa {
+    color: #f0f0f2;
+    float: left;
+    padding: 20px;
+    padding-bottom: 0px;
+}
 
 
 /*Stuff needed for dynamic box movement*/
