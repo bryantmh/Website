@@ -1,0 +1,155 @@
+/*Main Theme*/
+
+html, body {
+    font-family: Verdana;
+    font-size: 16px;
+    margin: 0px;
+    background-color: #e9ebee;
+    height: 100%;
+}
+
+nav h1 {
+    font-size: 2em;
+    color: white; 
+    margin: 0; 
+    padding: 25px;
+    padding-bottom: 10px;
+}
+
+nav ul, nav div {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #B66F3B;
+    padding-left: 7vw;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #944F1C;
+}
+
+footer {
+    left: 0;
+    bottom: 0;
+    background-color: #B66F3B;
+    color: white;
+    height: 40px;
+    padding: 10px;
+}
+
+footer a {
+    color: white;
+}
+
+p {
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: -5px;
+}
+
+.fa {
+    color: white;
+    float: left;
+    padding: 20px;
+    padding-bottom: 0px;
+}
+
+
+.main {
+    grid-area: main;
+    background-color: white;
+    padding: 2em;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    background-color: white;
+    padding: 2em;
+    text-align: center;
+    max-height: 855px;
+    width: 5em;
+}
+
+
+.grid-container {
+  display: grid;
+  grid-template-columns: .5fr 4fr;
+  grid-template-areas: "sidebar main";
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-left: 10em;
+  padding-right: 10em;
+  min-height: 79.3%;
+  grid-gap: 1em;
+
+}
+
+.photos {
+    display: flex;
+    justify-content: flex-start;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.photos img {
+    height: auto;
+    max-width: 100%;
+    max-height: 275px;
+    margin: .6em;
+}
+
+.sidebar a, .sidebar a:link, .sidebar a:visited {
+    color: #081E46;
+    text-decoration: none;
+    font-size: 1.8em;
+}
+
+.sidebar a:hover {
+    color: #4C6592;
+    font-size: 2.1em;
+}
+
+@media screen and (max-width: 900px)
+{
+    .grid-container {
+        grid-template-columns: 1fr;
+        grid-template-areas: "sidebar"
+                             "main";
+        padding: 0px;
+    }
+
+    .sidebar {
+        padding: 0em;
+        text-align: center;
+        max-height: 855px;
+        width: auto;
+    }
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+select {
+    font-size: 1.4em;
+    padding: .1em;
+}
+
+fieldset {
+    padding-bottom: .2em;
+}
