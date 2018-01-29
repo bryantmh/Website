@@ -1,4 +1,6 @@
 <html>
+	<body>
+	<div id="container">
 	<head>
 		<link rel="stylesheet" type="text/css" href="./timeline.css">
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -8,7 +10,7 @@
 	<nav>
 		<div><i class="fa fa-3x fa-long-arrow-right" aria-hidden="true"></i><h1>BryantHinton.com</h1></div>
 		<ul>
-			<li><a href="./">Home</a></li>
+			<li><a class="active" href="./">Home</a></li>
 			<li><a href="./start.html">Getting Started</a></li>
 			<li><a href="./write.php">Write</a></li>
 			<li><a href="./upload.html">Upload Photos</a></li>
@@ -16,26 +18,29 @@
 		</ul>
 	</nav>
 
-	<body>
-		<div class='grid-container'>
+
+		<div id="body" class='grid-container' style="grid-gap: 4em;">
 			<div class='main'>
 				<h2>Timelines</h2>
 				<p>Welcome to Timelines: An app combining the best of photo management with writing in your journal</p>
 			</div>
-			<div class='sidebar' style="width: 12em; padding: 0em;">
-				<p>Login</p>
+			<div class='sidebar' style="width: 12em; padding: 1em; text-align: left;">
+				<p style=""><b>Login</b></p>
 				<form>
-					<input name="username">
-					<input name="password">
-					<input type="button">
+					<label for="Username">Username<br></label>
+					<input name="username" id="Username">
+					<label for="Password">Password<br></label>
+					<input name="password" id="Password">
+					<button name="login" id="Login">Login</button>
 					<br><br>
-					<p>Don't have a login? Create one now!<br>It's easy and free</p>
-					<input type="button">
+					<p><b>Don't have a login? Create one now!<br>It's easy and free</b></p>
+					<button name="register" id="Register">Register</button>
 				</form>
 			</div>
 		</div>
-	</body>
 
 	<footer>
 	</footer>
+	</div>
+		<body>
 </html>
