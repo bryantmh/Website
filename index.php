@@ -10,6 +10,7 @@
 		<li><a href="./">Home</a></li>
 		<li><a href="./portfolio">Portfolio</a></li>
 		<li><a href="./photography/">Photography</a></li>
+		<li><a href="./timeline/">Timelines</a></li>
 	</ul>
 </nav>
 
