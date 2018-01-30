@@ -46,6 +46,7 @@
 				</div>
 			</div>
 			<footer>
+				<a href="https://github.com/bryantmh/Website/tree/master/timeline">GitHub Repository</a>
 			</footer>
 		</div>
 	<body>

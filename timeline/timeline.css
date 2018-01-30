@@ -58,6 +58,8 @@ footer {
 
 footer a {
     color: white;
+    padding: 1em;
+    position: absolute;
 }
 
 p {
