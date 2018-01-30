@@ -9,6 +9,11 @@ html, body {
     padding:0;
 }
 
+#container {
+    min-height: 100%;
+    position: relative;
+}
+
 nav h1 {
     font-size: 2em;
     color: white; 
@@ -73,6 +78,7 @@ p {
     grid-area: main;
     background-color: white;
     padding: 2em;
+    margin-bottom: 2em;
 }
 
 .sidebar {
@@ -153,17 +159,18 @@ select {
 
 fieldset {
     padding-bottom: .2em;
+    border: 0px;
 }
 
 .active {
     background-color: #944F1C;
 }
 
-#container {
-    min-height: 100%;
-    position: relative;
-}
-
 #body {
    padding-bottom:60px;   /* Height of the footer */
+}
+
+textarea {
+    width: 80%;
+    font-size: 20px;
 }

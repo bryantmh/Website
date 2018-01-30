@@ -1,36 +1,52 @@
-<head>
-	<link rel="stylesheet" type="text/css" href="./photography.css">
-	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-	<title>Photography About</title>
-</head>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="./timeline.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+		<title>Timelines</title>
+	</head>
+	<body>
+		<div id="container">
+			<nav>
+				<div><i class="fa fa-3x fa-long-arrow-right" aria-hidden="true"></i><h1>BryantHinton.com</h1></div>
+				<ul>
+					<li><a href="./">Home</a></li>
+					<li><a href="./start.html">Getting Started</a></li>
+					<li><a href="./write.html">Write</a></li>
+					<li><a class="active" href="./upload.html">Upload Photos</a></li>
+					<li><a href="./display.html">View Timeline</a></li>
+				</ul>
+			</nav>
+			<div id="body" class='grid-container' style="grid-gap: 4em;">
+				<div class='main'>
+					<h2>Timelines</h2>
+					<p style="text-align: center;">Welcome to Timelines: An app combining the best of photo management with writing in your journal</p>
+					<?php
+						echo "<div class='photos'>\n";
+							$dirname = "./Home/";
+							$images = glob($dirname."*.*");
 
-<nav>
-	<div><i class="fa fa-3x fa-camera" aria-hidden="true"></i><h1>BryantHinton.com</h1></div>
-	<ul>
-		<li><a href="./">Home</a></li>
-		<li><a href="./portfolio.html">Portfolio</a></li>
-		<li><a href="./reviews.html">Reviews</a></li>
-		<li><a href="./about.html">About</a></li>
-		<li><a href="./contact.html">Contact</a></li>
-	</ul>
-</nav>
-
-<body>
-	<div class='parent'>
-		<h2>About</h2>
-		<section>
-	    <aside>
-	    	<p>My name is Bryant Hinton, and I'm a Computer Science major at BYU. When I'm not coding, however, I also walking through nature, and recording what I see via my trusty iPhone camera. Yadda yadda.</p>
-	    	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ut lorem vitae est cursus varius. Morbi libero arcu, molestie quis interdum et, vestibulum a elit. Donec congue imperdiet purus, nec eleifend erat volutpat vitae. Cras non magna at magna cursus pretium sed in ex. Sed fringilla nunc in sagittis ullamcorper. Duis sit amet mauris non orci egestas porttitor et eget eros. Sed hendrerit rutrum molestie. Interdum et malesuada fames ac ante ipsum primis in faucibus. Etiam egestas arcu ex, sed cursus nunc ultrices nec. Phasellus nunc eros, auctor a mauris ac, fermentum ullamcorper nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elementum eros vitae ante viverra malesuada.</p>
-	    </aside>
-	    <article>
-	   		<img src='./img/me.jpg'>
-	    </article>
-	</section>
-	</div>
-</body>
-
-<footer>
-	<a href='https://github.com/BYU-CS260-Winter-2018/lab-1-bryantmh'>GitHub Repository</a>
-	<a href='http://www.freepik.com/free-vector/grey-linen-texture-background_835399.htm' style="font-size: .6em; float: right; padding-right: 20px;">Background by Freepik</a>
-</footer>
+							foreach($images as $image) {
+							    echo "<img src='".$image."'>\n";
+							}
+						echo "</div>";
+					?>
+				</div>
+				<div class='sidebar' style="width: 15em; padding: 2em; text-align: left; max-height: 350px;">
+					<p style=""><b>Login</b></p>
+					<form>
+						<label for="Username">Username<br></label>
+						<input name="username" id="Username"><br>
+						<label for="Password">Password<br></label>
+						<input name="password" id="Password"><br><br>
+						<button name="login" id="Login">Login</button>
+						<br><br>
+						<p><b>Don't have a login?<br>Create one now!<br>It's easy and free</b></p>
+						<button name="register" id="Register">Register</button>
+					</form>
+				</div>
+			</div>
+			<footer>
+			</footer>
+		</div>
+	<body>
+</html>
