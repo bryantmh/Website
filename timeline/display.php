@@ -11,9 +11,9 @@
 				<ul>
 					<li><a href="./">Home</a></li>
 					<li><a href="./start.html">Getting Started</a></li>
-					<li><a href="./write.html">Write</a></li>
+					<li><a href="./write.php">Write</a></li>
 					<li><a href="./upload.html">Upload Photos</a></li>
-					<li><a class="active" href="./display.html">View Timeline</a></li>
+					<li><a class="active" href="./display.php">View Timeline</a></li>
 				</ul>
 			</nav>
 			<div id="body" class='grid-container'>
