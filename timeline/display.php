@@ -35,7 +35,7 @@
 				<div class='sidebar'>
 						<?php
 							for ($i = 1995; $i < 2019; $i++)
-								echo "<a href=''>$i</a><br>\n";
+								echo "<a href='/timeline/display.php?year=$i'>$i</a><br>\n";
 						?>
 				</div>
 			</div>
