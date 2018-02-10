@@ -12,11 +12,11 @@
 					<li><a class="active" href="./">Home</a></li>
 					<li><a href="./start.html">Getting Started</a></li>
 					<li><a href="./write.php">Write</a></li>
-					<li><a href="./upload.html">Upload Photos</a></li>
+					<li><a href="./upload.php">Upload Photos</a></li>
 					<li><a href="./display.php">View Timeline</a></li>
 				</ul>
 			</nav>
-			<div id="body" class='grid-container' style="grid-gap: 4em;">
+			<div id="body" class='grid-container'>
 				<div class='main'>
 					<h2>Timelines</h2>
 					<p style="text-align: center;">Welcome to Timelines: An app combining the best of photo management with writing in your journal</p>
@@ -31,7 +31,7 @@
 						echo "</div>";
 					?>
 				</div>
-				<div class='sidebar' style="width: 15em; padding: 2em; text-align: left; max-height: 350px;">
+				<div class='sidebar' style="width: 10em; padding: 2em; text-align: left; max-height: 350px;">
 					<p style=""><b>Login</b></p>
 					<form>
 						<label for="Username">Username<br></label>
@@ -46,6 +46,7 @@
 				</div>
 			</div>
 			<footer>
+				<a href="https://github.com/bryantmh/Website/tree/master/timeline">GitHub Repository</a>
 			</footer>
 		</div>
 	<body>

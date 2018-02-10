@@ -12,7 +12,7 @@
 					<li><a href="./">Home</a></li>
 					<li><a href="./start.html">Getting Started</a></li>
 					<li><a class="active" href="./write.php">Write</a></li>
-					<li><a href="./upload.html">Upload Photos</a></li>
+					<li><a href="./upload.php">Upload Photos</a></li>
 					<li><a href="./display.php">View Timeline</a></li>
 				</ul>
 			</nav>
@@ -62,6 +62,7 @@
 				</div>
 			</div>
 			<footer>
+				<a href="https://github.com/bryantmh/Website/tree/master/timeline">GitHub Repository</a>
 			</footer>
 		</div>
 	</body>

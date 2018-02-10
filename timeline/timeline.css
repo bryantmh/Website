@@ -58,6 +58,8 @@ footer {
 
 footer a {
     color: white;
+    padding: 1em;
+    position: absolute;
 }
 
 p {
@@ -88,6 +90,7 @@ p {
     text-align: center;
     max-height: 855px;
     width: 5em;
+    margin-bottom: 2em;
 }
 
 
@@ -97,10 +100,10 @@ p {
   grid-template-areas: "sidebar main";
   padding-top: 2em;
   padding-bottom: 2em;
-  padding-left: 10em;
-  padding-right: 10em;
+  padding-left: 8em;
+  padding-right: 8em;
   min-height: 79.3%;
-  grid-gap: 1em;
+  grid-gap: 4em;
 
 }
 
