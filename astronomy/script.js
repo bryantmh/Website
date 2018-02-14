@@ -48,7 +48,7 @@ $(document).ready(function() {
 					// for (var i=0; i<json.items.length; i++) {
 					//     results += '<a href="' + json.items[i].link + '""><b>' + json.items[i].title + '</b></a><br>';
 					// }
-					$("#weatherResults").html(results);
+					// $("#weatherResults").html(results);
 				$('body').css('background-image', 'url("' + json.url + '")');
 			}
 		});
@@ -72,7 +72,7 @@ $(document).ready(function() {
 					// for (var i=0; i<json.items.length; i++) {
 					//     results += '<a href="' + json.items[i].link + '""><b>' + json.items[i].title + '</b></a><br>';
 					// }
-					$("#weatherResults").html(results);
+					// $("#weatherResults").html(results);
 				$('body').css('background-image', 'url("' + json.url + '")');
 			}
 		});

@@ -106,32 +106,21 @@ body {
   }
 }
 
-
-/*
- * Cover
- */
-
-.cover {
-  padding: 0 1.5rem;
-}
-.cover .btn-lg {
-  padding: .75rem 1.25rem;
-  font-weight: bold;
-}
-
-
-/*
- * Footer
- */
-
 .mastfoot {
   color: rgba(255,255,255,.5);
 }
 
+.mastfoot {
+    position: fixed;
+    bottom: 0;
+  }
 
-/*
- * Affix and center
- */
+/*.masthead,
+.mastfoot,
+.cover-container {
+    width: 100%;
+}*/
+
 
 @media (min-width: 40em) {
   /* Pull out the header and footer */
@@ -139,26 +128,19 @@ body {
     position: fixed;
     top: 0;
   }
-  .mastfoot {
-    position: fixed;
-    bottom: 0;
-  }
+  
   /* Start the vertical centering */
-  .site-wrapper-inner {
+  /*.site-wrapper-inner {
     vertical-align: middle;
-  }
+  }*/
   /* Handle the widths */
-  .masthead,
-  .mastfoot,
-  .cover-container {
-    width: 100%; /* Must be percentage or pixels for horizontal alignment */
-  }
+
 }
 
 @media (min-width: 62em) {
   .masthead,
   .mastfoot,
   .cover-container {
-    width: 42rem;
+    width: 52rem;
   }
 }
