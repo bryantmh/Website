@@ -11,7 +11,7 @@
     <div class="site-wrapper">
       <div class="site-wrapper-inner">
         <div class="cover-container">
-          <div class="masthead clearfix">
+          <div class="masthead clearfix" style="z-index: 1">
             <div class="inner">
               <h3 class="masthead-brand">NASA Image of the Day</h3>
               <nav class="nav nav-masthead">
@@ -20,7 +20,7 @@
               </nav>
             </div>
           </div>
-          <div class="inner cover">
+          <div class="inner cover" >
             <?php
               date_default_timezone_set('America/New_York');
               $currDate = isset($_GET["date"]) ? date($_GET["date"]) : date("Y-m-d");
