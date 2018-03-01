@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <a href="https://github.com/BYU-CS260-Winter-2018/Website">Github Link</a>
+      <a href="https://github.com/bryantmh/Website/tree/master/proj3">Github Link</a>
     </div>
   </footer>
 </template>
