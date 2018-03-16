@@ -1,10 +1,10 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-
+const cors = require('cors');
 const app = express();
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-
+app.use(cors());
 app.use(express.static('dist'));
 
 
@@ -48,4 +48,4 @@ app.delete('/api/items/:id', (req, res) => {
   res.sendStatus(200);
 });
 
-app.listen(3000, () => console.log('Server listening on port 3000!'));
+app.listen(3001, () => console.log('Server listening on port 3001!'));
