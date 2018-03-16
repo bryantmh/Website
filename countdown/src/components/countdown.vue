@@ -8,13 +8,22 @@
                 <b>{{minutes}}</b> Minutes<br>
                 <b>{{seconds}}</b> Seconds<br>
             </p>
-            <div id="today">
-              <button v-on:click="makeToday" class="btn btn-default">Time From Now</button>
-            </div><br>
-            <label for="date">Pick a date</label>
-            <input v-on:change="makeAnotherDay" v-model="dateSelector" type="date" id="date">
-            <button v-on:click="addItem" class="btn btn-default">Add to Server</button>
-            {{items}}
+            <div>
+                <button v-on:click="makeToday" class="btn btn-default">Time From Now</button>
+                <div style="padding: 10px;">Or</div>
+                <label for="date">Pick a date</label>
+                <input v-on:change="makeAnotherDay" v-model="dateSelector" type="date" id="date">
+            </div><hr><br>
+            <div>
+                <button v-on:click="addItem" class="btn btn-default">Add Time to Server</button><br><br>
+                <div v-for="item in items">
+                    <div style="padding-bottom: 10px;">
+                        <button class="btn btn-default" v-on:click="getItem(item.id)">{{item.since}}</button>
+                        <button class="btn btn-info" v-on:click="updateItem(item.id)">Update</button>
+                        <button class="btn btn-primary" v-on:click="removeItem(item.id)">Delete</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </template>
@@ -67,39 +76,47 @@
                 this.since = $.format.date(new Date(new Date(this.dateSelector).getTime() + 60000 * 60 * 7), 'MMMM d, yyyy, h:mm:ss a');
             },
             getItem: function(id) {
-                axios.get("/api/items/"+id).then(response => {
-                     this.since = response.since;
-                     this.from = response.from;
-                     this.dateSelector = response.dateSelector;
+                axios.get("/api/items/" + id).then(response => {
+                     this.since = response.data.since
+                     this.from = response.data.from
+                     this.dateSelector = response.data.dateSelector
                      return true;
                 }).catch(err => {
                 });
             },
+            getItems: function() {
+                axios.get("/api/items/").then(response => {
+                    this.items = response.data
+                    return true;
+                }).catch(err => {
+                });
+            },
             addItem: function() {
-                axios.post("/api/items", {
+                axios.post("/api/items/", {
                     since: this.since,
                     from: this.from,
                     dateSelector: this.dateSelector
                 }).then(response => {
-                    this.items = response.id;
-                    return true;
+                    this.getItems()
+                    return true
                 }).catch(err => {
                 });
             },
-            updateItem: function() {
-                axios.put("/api/items/" + item.id, {
-                    text: item.text,
-                    completed: !item.completed,
-                    orderChange: false,
+            updateItem: function(id) {
+                axios.put("/api/items/" + id, {
+                    since: this.since,
+                    from: this.from,
+                    dateSelector: this.dateSelector
                 }).then(response => {
-                    return true;
+                    this.getItems()
+                    return true
                 }).catch(err => {
                 });
             },
-            remoteItem: function() {
-                axios.delete("/api/items/" + item.id).then(response => {
-                    this.getItems();
-                    return true;
+            removeItem: function(id) {
+                axios.delete("/api/items/" + id).then(response => {
+                    this.getItems()
+                    return true
                 }).catch(err => {
                 });
             }

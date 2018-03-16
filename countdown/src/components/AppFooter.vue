@@ -1,7 +1,7 @@
 <template>
   <footer class="footer">
     <div class="container">
-      <a href="https://github.com/bryantmh/Website/tree/master/proj3">Github Link</a>
+      <a href="https://github.com/bryantmh/Website/tree/master/countdown">Github Link</a>
     </div>
   </footer>
 </template>

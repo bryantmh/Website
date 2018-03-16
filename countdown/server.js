@@ -8,30 +8,33 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static('dist'));
 
 
-let items = [];
-let id = 0;
+var items = [];
+var id = -1;
 
 app.get('/api/items/:id', (req, res) => {
   let id = parseInt(req.params.id);
-  res.send(items[id]);
+  let index = items.map(item => { return item.id; }).indexOf(id);
+  res.send(items[index]);
+});
+
+app.get('/api/items/', (req, res) => {
+  res.send(items);
 });
 
 app.put('/api/items/:id', (req, res) => {
   let id = parseInt(req.params.id);
-  let itemsMap = items.map(item => { return item.id; });
-  let index = itemsMap.indexOf(id);
-  let item = items[index];
-  item.since = req.body.since;
-  item.from = req.body.from;
-  item.dateSelector = req.body.dateSelector;
-  res.send(item);
+  let index = items.map(item => { return item.id; }).indexOf(id);
+  items[index].since = req.body.since
+  items[index].from = req.body.from
+  items[index].dateSelector = req.body.dateSelector
+  res.send(200);
 });
 
 app.post('/api/items', (req, res) => {
   id = id + 1;
-  let item = {id:id, text:req.body.text, completed: req.body.completed};
+  let item = {id:id, since:req.body.since, from: req.body.from, dateSelector: req.body.dateSelector};
   items.push(item);
-  res.send(id);
+  res.send(item);
 });
 
 app.delete('/api/items/:id', (req, res) => {
