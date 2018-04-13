@@ -57,7 +57,7 @@ app.post('/api/users', (req, res) => {
     return bcrypt.hash(req.body.password, saltRounds);
   }).then(hash => {
     return knex('users').insert({email: req.body.email, hash: hash, username:req.body.username,
-				 name:req.body.name, role: 'user'});
+     name:req.body.name, role: 'user'});
   }).then(ids => {
     return knex('users').where('id',ids[0]).first();
   }).then(user => {
@@ -74,13 +74,13 @@ app.post('/api/users', (req, res) => {
 app.get('/api/users/:id/tweets', (req, res) => {
   let id = parseInt(req.params.id);
   knex('users').join('tweets','users.id','tweets.user_id')
-    .where('users.id',id)
-    .orderBy('created','desc')
-    .select('tweet','username','name','created').then(tweets => {
-      res.status(200).json({tweets:tweets});
-    }).catch(error => {
-      res.status(500).json({ error });
-    });
+  .where('users.id',id)
+  .orderBy('created','desc')
+  .select('tweet','username','name','created').then(tweets => {
+    res.status(200).json({tweets:tweets});
+  }).catch(error => {
+    res.status(500).json({ error });
+  });
 });
 
 app.post('/api/users/:id/tweets', (req, res) => {
@@ -108,15 +108,15 @@ app.get('/api/tweets/search', (req, res) => {
   if (req.query.limit)
     limit = parseInt(req.query.limit);
   knex('users').join('tweets','users.id','tweets.user_id')
-    .whereRaw("MATCH (tweet) AGAINST('" + req.query.keywords + "')")
-    .orderBy('created','desc')
-    .limit(limit)
-    .offset(offset)
-    .select('tweet','username','name','created').then(tweets => {
-      res.status(200).json({tweets:tweets});
-    }).catch(error => {
-      res.status(500).json({ error });
-    });
+  .whereRaw("MATCH (tweet) AGAINST('" + req.query.keywords + "')")
+  .orderBy('created','desc')
+  .limit(limit)
+  .offset(offset)
+  .select('tweet','username','name','created').then(tweets => {
+    res.status(200).json({tweets:tweets});
+  }).catch(error => {
+    res.status(500).json({ error });
+  });
 });
 
 app.get('/api/tweets/hash/:hashtag', (req, res) => {
@@ -127,15 +127,15 @@ app.get('/api/tweets/hash/:hashtag', (req, res) => {
   if (req.query.limit)
     limit = parseInt(req.query.limit);
   knex('users').join('tweets','users.id','tweets.user_id')
-    .whereRaw("tweet REGEXP '^#" + req.params.hashtag + "' OR tweet REGEXP ' #" + req.params.hashtag + "'")
-    .orderBy('created','desc')
-    .limit(limit)
-    .offset(offset)
-    .select('tweet','username','name','created').then(tweets => {
-      res.status(200).json({tweets:tweets});
-    }).catch(error => {
-      res.status(500).json({ error });
-    });
+  .whereRaw("tweet REGEXP '^#" + req.params.hashtag + "' OR tweet REGEXP ' #" + req.params.hashtag + "'")
+  .orderBy('created','desc')
+  .limit(limit)
+  .offset(offset)
+  .select('tweet','username','name','created').then(tweets => {
+    res.status(200).json({tweets:tweets});
+  }).catch(error => {
+    res.status(500).json({ error });
+  });
 });
 
 app.listen(3000, () => console.log('Server listening on port 3000!'));
