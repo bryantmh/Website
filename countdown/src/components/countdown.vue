@@ -80,7 +80,7 @@
                 this.since = $.format.date(new Date(new Date(this.dateSelector).getTime() + 60000 * 60 * 7), 'MMMM d, yyyy, h:mm:ss a');
             },
             getItem: function(id) {
-                axios.get("http://localhost:3001/api/users/" + this.user.id + "/items/" + id).then(response => {
+                axios.get("http://bryanthinton.com:3001/api/users/" + this.user.id + "/items/" + id).then(response => {
                    this.since = response.data.item[0].since
                    this.from = response.data.item[0].from
                    return true;
@@ -88,14 +88,14 @@
                });
            },
            getItems: function() {
-            axios.get("http://localhost:3001/api/users/" + this.user.id + "/items/").then(response => {
+            axios.get("http://bryanthinton.com:3001/api/users/" + this.user.id + "/items/").then(response => {
                 this.items = response.data.items
                 return true;
             }).catch(err => {
             });
         },
         addItem: function() {
-            axios.post("http://localhost:3001/api/users/" + this.user.id + "/items/", {
+            axios.post("http://bryanthinton.com:3001/api/users/" + this.user.id + "/items/", {
                 since: this.since,
                 from: this.from
             }).then(response => {
@@ -105,7 +105,7 @@
             });
         },
         // updateItem: function(id) {
-        //     axios.put("http://localhost:3001/api/users/" + this.user.id + "/items/" + id, {
+        //     axios.put("http://bryanthinton.com:3001/api/users/" + this.user.id + "/items/" + id, {
         //         since: this.since,
         //         from: this.from,
         //         dateSelector: this.dateSelector
@@ -120,7 +120,7 @@
                 if (this.items[i].id == id)
                     this.items.splice(i, 1);
             }
-            axios.delete("http://localhost:3001/api/items/" + id).then(response => {
+            axios.delete("http://bryanthinton.com:3001/api/items/" + id).then(response => {
                 return true
             }).catch(err => {
                 console.log("Error")
