@@ -19,7 +19,7 @@
                 <div v-for="item in items">
                     <div style="padding-bottom: 10px;">
                         <button class="btn btn-default" v-on:click="getItem(item.id)">{{item.since}}</button>
-                        <button class="btn btn-info" v-on:click="updateItem(item.id)">Update</button>
+                        <!-- <button class="btn btn-info" v-on:click="updateItem(item.id)">Update</button> -->
                         <button class="btn btn-primary" v-on:click="removeItem(item.id)">Delete</button>
                     </div>
                 </div>
@@ -34,6 +34,8 @@
 
     import axios from 'axios';
     // axios.defaults.baseURL = 'http://bryanthinton.com:3001';
+    // axios.defaults.baseURL = 'http://localhost.com:3001';
+    // console.log(axios.defaults.baseURL)
     export default {
 
         mounted() {
@@ -47,7 +49,8 @@
                 since: "January 1st, 1970, 12:00:00 AM",
                 from: 0,
                 dateSelector: '',
-                items: []
+                items: [],
+                user: this.$store.getters.user
             }
         },
         computed: {
@@ -77,49 +80,52 @@
                 this.since = $.format.date(new Date(new Date(this.dateSelector).getTime() + 60000 * 60 * 7), 'MMMM d, yyyy, h:mm:ss a');
             },
             getItem: function(id) {
-                axios.get("/api/items/" + id).then(response => {
-                   this.since = response.data.since
-                   this.from = response.data.from
-                   this.dateSelector = response.data.dateSelector
+                axios.get("http://localhost:3001/api/users/" + this.user.id + "/items/" + id).then(response => {
+                   this.since = response.data.item[0].since
+                   this.from = response.data.item[0].from
                    return true;
                }).catch(err => {
                });
            },
            getItems: function() {
-            axios.get("/api/items/").then(response => {
-                this.items = response.data
+            axios.get("http://localhost:3001/api/users/" + this.user.id + "/items/").then(response => {
+                this.items = response.data.items
                 return true;
             }).catch(err => {
             });
         },
         addItem: function() {
-            axios.post("/api/items/", {
+            axios.post("http://localhost:3001/api/users/" + this.user.id + "/items/", {
                 since: this.since,
-                from: this.from,
-                dateSelector: this.dateSelector
+                from: this.from
             }).then(response => {
                 this.getItems()
                 return true
             }).catch(err => {
             });
         },
-        updateItem: function(id) {
-            axios.put("/api/items/" + id, {
-                since: this.since,
-                from: this.from,
-                dateSelector: this.dateSelector
-            }).then(response => {
-                this.getItems()
-                return true
-            }).catch(err => {
-            });
-        },
+        // updateItem: function(id) {
+        //     axios.put("http://localhost:3001/api/users/" + this.user.id + "/items/" + id, {
+        //         since: this.since,
+        //         from: this.from,
+        //         dateSelector: this.dateSelector
+        //     }).then(response => {
+        //         this.getItems()
+        //         return true
+        //     }).catch(err => {
+        //     });
+        // },
         removeItem: function(id) {
-            axios.delete("/api/items/" + id).then(response => {
-                this.getItems()
+            for (var i = 0; i < this.items.length; i++) {
+                if (this.items[i].id == id)
+                    this.items.splice(i, 1);
+            }
+            axios.delete("http://localhost:3001/api/items/" + id).then(response => {
                 return true
             }).catch(err => {
+                console.log("Error")
             });
+
         }
     }
 }

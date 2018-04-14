@@ -10,15 +10,13 @@ export default new Vuex.Store({
 		user: {},
 		loggedIn: false,
 		loginError: '',
-		registerError: '',
-		feed: [],
+		registerError: ''
 	},
 	getters: {
 		user: state => state.user,
 		loggedIn: state => state.loggedIn,
 		loginError: state => state.loginError,
 		registerError: state => state.registerError,
-		feed: state => state.feed,
 	},
 	mutations: {
 		setUser (state, user) {
@@ -32,9 +30,6 @@ export default new Vuex.Store({
 		},
 		setRegisterError (state, message) {
 			state.registerError = message;
-		},
-		setFeed (state, feed) {
-			state.feed = feed;
 		},
 	},
 	actions: {
@@ -79,19 +74,19 @@ export default new Vuex.Store({
   	 	context.commit('setUser', {});
   	 	context.commit('setLogin',false);
   	 },
-  	 getFeed(context) {
-  	 	axios.get("/api/users/" + context.state.user.id + "/items").then(response => {
-  	 		context.commit('setFeed',response.data.items);
-  	 	}).catch(err => {
-  	 		console.log("getFeed failed:",err);
-  	 	});
-  	 },
-  	 addTime(context,item) {
-  	 	axios.post("/api/users/" + context.state.user.id + "/items",item).then(response => {
-  	 		return context.dispatch('getFeed');
-  	 	}).catch(err => {
-  	 		console.log("addTweet failed:",err);
-  	 	});
-  	 }
+  	 // getItems(context) {
+  	 // 	axios.get("/api/users/" + context.state.user.id + "/items").then(response => {
+  	 // 		context.commit('setItems',response.data.items);
+  	 // 	}).catch(err => {
+  	 // 		console.log("getFeed failed:",err);
+  	 // 	});
+  	 // },
+  	 // addItem(context,item) {
+  	 // 	axios.post("/api/users/" + context.state.user.id + "/items",item).then(response => {
+  	 // 		return context.dispatch('getItems');
+  	 // 	}).catch(err => {
+  	 // 		console.log("addTweet failed:",err);
+  	 // 	});
+  	 // }
   	}
   });

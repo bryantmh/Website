@@ -16,16 +16,13 @@ const knex = require('knex')(config);
 let bcrypt = require('bcrypt');
 const saltRounds = 10;
 
-var items = [];
-var id = -1;
-
 app.get('/api/users/:id/items/:time', (req, res) => {
   let id = parseInt(req.params.id);
   let time = parseInt(req.params.time);
   knex('users').join('times', 'users.id', 'times.user_id')
     .where('users.id', id)
     .where('times.id', time)
-    .select('from', 'since', 'dateSelector').then(times => {
+    .select('from', 'since').then(times => {
       res.status(200).json({item:times});
     }).catch(error => {
       res.status(500).json({error});
@@ -34,58 +31,53 @@ app.get('/api/users/:id/items/:time', (req, res) => {
 
 app.get('/api/users/:id/items/', (req, res) => {
   let id = parseInt(req.params.id);
-  knex('users').join('times', 'users.id', 'times.user_id')
-    .where('users.id', id)
-    .select('from', 'since', 'dateSelector').then(times => {
+  knex('times')
+    .where('user_id', id)
+    .then(times => {
       res.status(200).json({items:times});
     }).catch(error => {
       res.status(500).json({error});
     });
 });
 
-// app.put('/api/items/:id', (req, res) => {
+// app.put('/api/users/:id/items/:item', (req, res) => {
 //   let id = parseInt(req.params.id);
-//   let index = items.map(item => { return item.id; }).indexOf(id);
-//   items[index].since = req.body.since
-//   items[index].from = req.body.from
-//   items[index].dateSelector = req.body.dateSelector
-//   res.send(200);
+//   let item = parseInt(req.params.id);
+//   knex('times').where({id: item, user_id: id}).update({user_id: id, since:req.body.since, from: req.body.from, dateSelector: req.body.dateSelector})
+//   .then(response => {
+//     res.status(200);
+//     return;
+//   }).catch(error => {
+//     console.log(error);
+//     res.status(500).json({ error });
+//   });
 // });
 
-app.post('/api/users/:id/items', (req, res) => {
-  // id = id + 1;
-  // let item = {id:id, since:req.body.since, from: req.body.from, dateSelector: req.body.dateSelector};
-  // items.push(item);
-  // res.send(item);
+app.post('/api/users/:id/items/', (req, res) => {
   let id = parseInt(req.params.id);
-   knex('users').where('id',id).first().then(user => {
-    return knex('times').insert({user_id: id, since:req.body.since, from: req.body.from, dateSelector: req.body.dateSelector});
-  // })
-  //  .then(ids => {
-  //   return knex('times').where('id',ids[0]).first();
-  // }).then(tweet => {
-  //   res.status(200).json({tweet:tweet});
-  //   return;
+  knex('times').insert({user_id: id, since:req.body.since, from: req.body.from})
+  .then(response => {
+    res.status(200).json({since:req.body.since, from: req.body.from});
+    return;
   }).catch(error => {
     console.log(error);
     res.status(500).json({ error });
   });
 });
 
-// app.delete('/api/users/:id/items/:time', (req, res) => {
-//   let id = parseInt(req.params.id);
-//   let removeIndex = items.map(item => { return item.id; }).indexOf(id);
-//   if (removeIndex === -1) {
-//     res.status(404).send("Sorry, that item doesn't exist");
-//     return;
-//   }
-//   items.splice(removeIndex, 1);
-//   res.sendStatus(200);
-// });
+app.delete('/api/items/:time', (req, res) => {
+  let time = parseInt(req.params.time);
+  knex('times').where({id: time}).del()
+  .then(response => {
+    res.status(200);
+    return;
+  }).catch(error => {
+    res.status(500).json({error});
+  });
+});
 
 
 //Login
-
 app.post('/api/login', (req, res) => {
   if (!req.body.email || !req.body.password)
     return res.status(400).send();
