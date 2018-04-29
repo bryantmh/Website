@@ -1,0 +1,42 @@
+/* Links */
+a,
+a:focus,
+a:hover {
+  color: #fff;
+}
+
+/* Custom default button */
+.btn-secondary,
+.btn-secondary:hover,
+.btn-secondary:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritance from `body` */
+  background-color: #fff;
+  border: .05rem solid #fff;
+}
+
+html {
+  height: 100%;  
+}
+
+body {
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
+  background-size: cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+  margin-bottom: -80px;
+  height: 93.3%;
+}
+
+.footer {
+  height: 80px;
+}
+
+.modal {
+  color: #212529;
+  text-align: left;
+  text-shadow: none;
+}
