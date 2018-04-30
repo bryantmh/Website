@@ -125,3 +125,11 @@ h2 {
   -webkit-margin-start: 0px;
   -webkit-margin-end: 0px;
 }
+
+.cover {
+  object-fit: cover;
+  height: 300px;
+}
+.row {
+  margin-bottom: 25px;
+}
