@@ -7,6 +7,8 @@ $navLinks = [
 	'/xkcd' => "XKCD",
 	'/weather' => "Weather",
 	'/stackoverflow' => "Stack Overflow",
+	'/countdown' => "Countdown",
+	'/todo' => "Todo",
 	'/other' => "Other"
 ];
 ?>
