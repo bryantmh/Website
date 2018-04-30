@@ -1,5 +1,5 @@
 {
-  "name": "todo-graph",
+  "name": "todo",
   "version": "1.0.0",
   "description": "A Vue.js project",
   "author": "Bryant Hinton <bryanthinton01@gmail.com>",
@@ -13,7 +13,7 @@
     "axios": "^0.18.0",
     "chart.js": "^2.7.2",
     "vue": "^2.5.2",
-    "vue-chartjs": "^3.2.1",
+    "vue-chartjs": "^3.3.1",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
