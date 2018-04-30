@@ -34,7 +34,7 @@
 
     import axios from 'axios';
     // axios.defaults.baseURL = 'http://bryanthinton.com:3001';
-    axios.defaults.baseURL = 'http://localhost.com:3001';
+    axios.defaults.baseURL = 'http://localhost:3001';
     // console.log(axios.defaults.baseURL)
     export default {
 
