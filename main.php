@@ -30,7 +30,7 @@
 			<div class="card-body">
 				<h4 class="card-title">PHP</h4>
 				<p class="card-text">For processing code before it is sent to your device. Files end in .php</p>
-				<a href="./photograpy/display.php" class="btn btn-primary">Example</a>
+				<a href="./photography/display.php" class="btn btn-primary">Example</a>
 			</div>
 		</div>
 	</div>
