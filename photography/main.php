@@ -1,4 +1,4 @@
-<div class="grid-container">
+<div class="container-fluid">
 	<div class='main'>
 		<h2>Highlights</h2>
 		<p style="text-align: center;">Hey! I'm Bryant, and this is a website showcasing some of my photography</p>

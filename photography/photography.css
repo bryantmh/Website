@@ -58,64 +58,45 @@ textarea {
     font-size: 20px;
 }
 
-
 #mainContainer {
     padding: 0;
     max-width: 100% !important;
 }
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-areas: "main";
-  padding-top: 2em;
-  padding-bottom:60px;
-  padding-left: 6em;
-  padding-right: 6em;
-  min-height: 79.3%;
-  grid-gap: 4em;
-
-}
-
-@media screen and (max-width: 900px)
+@media screen and (max-width: 767px)
 {
-    .grid-container {
-        padding: 0px;
+    .main {
+        margin: 0px !important;
+    }
+    .container-fluid {
+      padding: 0px;
+    }
+    body {
+      margin-bottom: 60px !important;
+    }
+    .sidebar {
+      margin: 0px !important;
+      margin-bottom: 2em !important;
     }
 }
 
 .main {
-    grid-area: main;
     background-color: white;
     padding: 2em;
-    margin-bottom: 2em;
+    margin-top: 2em;
 }
 
 
 /*My Photos*/
 .sidebar {
-    grid-area: sidebar;
     background-color: white;
     padding: 1em;
+    margin: 2em;
     text-align: center;
     max-height: 1070px;
-    width: 7em;
-    margin-bottom: 2em;
+    min-width: 100px;
     margin-left: 2em;
-}
-
-
-.grid-container2 {
-  display: grid;
-  grid-template-columns: .5fr 4fr;
-  grid-template-areas: "sidebar main";
-  padding-top: 2em;
-  padding-bottom: 2em;
-  /*padding-left: 8em;*/
-  padding-right: 6em;
-  min-height: 79.3%;
-  /*grid-gap: 4em;*/
-
+  
 }
 
 .sidebar a, .sidebar a:link, .sidebar a:visited {
@@ -129,19 +110,13 @@ textarea {
     font-size: 2.1em;
 }
 
-@media screen and (max-width: 900px)
-{
-    .grid-container2 {
-        grid-template-columns: 1fr;
-        grid-template-areas: "sidebar"
-                             "main";
-        padding: 0px;
-    }
-
-    .sidebar {
-        padding: 0em;
-        text-align: center;
-        max-height: 855px;
-        width: auto;
-    }
+body {
+  margin-bottom: 110px;
+}
+.container-fluid {
+  padding: 2em;
+  padding-top: 0px;
+}
+.row {
+  margin: 0px;
 }
