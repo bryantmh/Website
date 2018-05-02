@@ -10,7 +10,11 @@
 		foreach($images as $image) {
 			echo "<img src='".$image."'>\n";
 		}
-		echo "</div>";
+		// echo "</div>";
+		// echo "<div id="myModal" class='modal'>
+		// 	  <span class='close'>&times;</span>
+		// 	  <img class='modal-content' id="img01">\
+		// 	</div>";
 		?>
 	</div>
 </div>

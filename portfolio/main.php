@@ -1,4 +1,4 @@
-<img src="./img/cover.jpg" width="100.05%" style="margin-left: -.3px;">
+<img src="./img/cover.jpg" width="100%" style="margin-left: .5px;">
 <h2 style="padding-left: 30px;">About Me</h2>
 <p style="padding-left: 30px; padding-right: 30px;">
 	My name is Bryant Hinton, and I am currently a Junior in BYU's Computer Science program. During which time I have learned the basics of good programming, and built many programs in languages such as C++ and Java.<br><br>

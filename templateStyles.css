@@ -143,21 +143,18 @@ h2 {
   background-size: cover;
   background-position: 50% 50%;
   position:absolute;
-    left:0;
-    right:0;
+  left:0;
+  right:0;
 }
 
 .next {
-  margin-top: 640px;
+  margin-top: 576px;
 }
 
-/* Header Parallax Element Style*/ 
-.paral {
-  min-height: 600px;
-  background-attachment: fixed;
-  background-size: cover;
-  background-position: 50% 50%;
+#bottomNext {
+  margin-top: 551px;
 }
+
 /* Paragraph for Parallax Section */ 
 .paral p {
   font-size: 24px;
@@ -178,10 +175,16 @@ h2 {
 .paralsec {
   background-image: url("./img/parallax1.jpg");
 }
-
-/* Image for Parallax Section */ 
 .paralsec1 {
-  background-image: url("./img/parallax2.png");
+  background-image: url("./img/parallax2.jpg");
 }
+.paralsec2 {
+  background-image: url("./img/parallax4.jpg");
+}
+.paralsec3 {
+  background-image: url("./img/parallax3.jpg");
+}
+
+
 /* Remove Bottom Margin from Jumbotron */
 .jumbotron{margin-bottom: 0;}

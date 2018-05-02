@@ -1,15 +1,4 @@
-<!-- <div class="jumbotron paral paralsec1 test">
-	<h1 class="display-3">Here is a heading 1</h1>
-	<p class="lead">Here is a short description 1</p>
-	<p class="lead">
-		<a class="btn btn-info btn-lg btn-md" href="#" role="button">Here is a button 1</a>
-	</p>
-</div>
-
-<div class="next">
-	More stuff
-</div> -->
-<h2> Hey! Welcome to my website!</h2>
+<h2>Hey! Welcome to my website!</h2>
 <p>
 	BryantHinton.com is an assortment of pages that I have made, both for fun, as well as for classes I've taken at BYU.<br>
 	I've utilized a large assortment of different technologies to build this website, a few of which are listed in the cards below
@@ -68,16 +57,49 @@
 		</div>
 	</div>
 </div>
-
-<!-- First Parallax Section -->
+<hr>
+<h2>Not sure where to go next?</h2>
+<p>
+	Does it seem like there's a bit much to go through? Scroll down for an entertaining journey, that as a bonus, doubles as a tour<br><br>
+</p>
+<!-- Parallax Section -->
 <div class="jumbotron paral paralsec test">
-	<h1 class="display-3">Who am I?</h1>
+	<h1 class="display-3">Work Experience</h1>
 	<p class="lead">My name is Bryant Hinton, and this is my website</p>
-	<!-- <p class="lead">
-		<a class="btn btn-info btn-lg btn-md" href="#" role="button">Here is a button 1</a>
-	</p> -->
+	<p class="lead">
+		<a class="btn btn-info btn-lg btn-md" href="./portfolio" role="button">View my portfolio</a>
+	</p>
 </div>
-
 <div class="next">
-	More stuff
+	<br>
+</div>
+<div class="jumbotron paral paralsec1 test">
+	<h1 class="display-3">For Fun</h1>
+	<p class="lead">Find out some of the cool things that I have done and places I have ben, besides building this website</p>
+	<p class="lead">
+		<a class="btn btn-info btn-lg btn-md" href="./photography" role="button">See my photos</a>
+	</p>
+</div>
+<div class="next">
+	<br>
+</div>
+<div class="jumbotron paral paralsec3 test">
+	<h1 class="display-3">Entertainment</h1>
+	<p class="lead">Need a good laugh? Look no further</p>
+	<p class="lead">
+		<a class="btn btn-info btn-lg btn-md" href="./xkcd" role="button">View the latest XKCD comic</a>
+	</p>
+</div>
+<div class="next">
+	<br>
+</div>
+<div class="jumbotron paral paralsec2 test">
+	<h1 class="display-3">Space</h1>
+	<p class="lead">Did the earlier picture get your hopes up for something space related? Well, look no further</p>
+	<p class="lead">
+		<a class="btn btn-info btn-lg btn-md" href="./astronomy" role="button">View the NASA image of the day</a>
+	</p>
+</div>
+<div class="next" id="bottomNext">
+	<br>
 </div>
